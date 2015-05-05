@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var GFs = ['Winter', 'Spring', 'summer', 'fall', 'rain', 'harvest'];
+
+   // console.log(GFs.splice(2));
+
+    console.log(GFs.splice(2,2));
+
+    console.log(GFs);
+
+    console.log(GFs.splice(2, 2, 'Texas GF', 'Florida GF', 'Hawai GF'));
+
+    console.log(GFs);
+
+    console.log(Math.sqrt(2));
+
+
+    console.log(typeof('1'));
+
+    console.log('a' % 1);
+
+
+
+    function scoreThrows(radiuses){
+        //Return total number of points
+        var point = 0;
+        var flag = true;
+        for(var i = 0; i < radiuses.length;i++ ){
+            if(radiuses(i) >10){
+                point = point + 0;
+                flag = false;
+            }
+            if(radiuses(i) >= 5 && radiuses(i) <= 10){
+                point = point + 5;
+                flag = false;
+            }
+
+            if(radiuses(i) <5){
+                point = point + 10;
+            }
+
+        }
+        if(flag === true){
+            point = point + 100;
+        }
+        return point;
+
+    }
+
+
+
+    console.log(['a','b',['c','d',['e']]].join(''));
+
+    var array = [7,3,4];
+    array.sort(function(x,y) {return x-y});
+    console.log(array);
+
+
+    function array_diff(a, b) {
+        var result = [];
+
+
+        if(b.length === 0){ return a;}
+        else{
+            for(var i = 0 ; i < a.length;i++){
+                for(var j = 0 ; j < b.length; j++ ){
+                    if(a[i] !== b[j]){
+                        result.push(a[i]);
+                    }
+                }
+            }
+
+
+
+            return result;}
+    }
+
+
+
+    console.log(array_diff([1,1,2],[]));
+
+</script>
+</body>
+</html>

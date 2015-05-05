@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script>
+    /*function logArrayElements(element, index, array) {
+        console.log('a[' + index + '] = ' + element + ' in this array [' + array + ']');
+        console.log(this);
+    }
+
+    var obj = {blue:'happy'};
+    array = [2,5,2,9];
+    // Note elision, there is no member at 2 so it isn't visited
+    array.forEach(logArrayElements,obj);
+
+
+    Array.prototype.forEach = function(func,obj){
+        for(var i = 0; i < this.length; i++){
+            func.call(obj,this[i],i,this);
+        }
+    };
+*/
+
+    Array.prototype.maps = function(func,obj){
+        var A= [];
+        for(var i = 0; i < this.length; i++){
+            A[i] = func(this[i],i,this);
+        }
+        return A;
+    };
+
+    var numbers = [1, 4, 9,23];
+    var doubles = numbers.maps(function(num) {
+        return num * 2;
+
+       //return this;
+    });
+     console.log(doubles);
+     var obj2 = {red:'happy'};
+
+    // Note elision, there is no member at 2 so it isn't visited
+
+
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>
